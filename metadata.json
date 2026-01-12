@@ -1,9 +1,0 @@
-{
-  "name": "Copy of Mera Room Web",
-  "description": "A modern room rental and listing application allowing users to find rooms, view details, and post their own listings with AI-assisted descriptions.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone",
-    "geolocation"
-  ]
-}
