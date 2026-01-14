@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
     "composite": true,
-
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "nodenext",
     "target": "ES2022",
     "lib": ["ES2022"],
-
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true
   },
