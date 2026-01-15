@@ -1,23 +1,11 @@
-function App() {
-  return (
-    <div>
-      <a
-        href="https://react.dev"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        React Docs
-      </a>
+import React from "react";
 
-      <a
-        href="https://vitejs.dev"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Vite Docs
-      </a>
+export default function App() {
+  return (
+    <div className="flex items-center justify-center h-screen bg-gray-100">
+      <h1 className="text-4xl font-bold text-blue-600">
+        Welcome to Mera Room!
+      </h1>
     </div>
   );
 }
-
-export default App;
