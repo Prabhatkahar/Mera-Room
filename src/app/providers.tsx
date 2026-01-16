@@ -1,13 +1,12 @@
-// src/app/providers.tsx
-import React, { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "../features/auth/AuthContext"; // path correct now
+import { AuthProvider } from "../features/auth/AuthContext.js"; // <--- notice .js
 
 interface ProvidersProps {
   children: ReactNode;
 }
 
-export const Providers: React.FC<ProvidersProps> = ({ children }) => (
+export const Providers = ({ children }: ProvidersProps) => (
   <BrowserRouter>
     <AuthProvider>{children}</AuthProvider>
   </BrowserRouter>

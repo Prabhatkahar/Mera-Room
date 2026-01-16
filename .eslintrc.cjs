@@ -1,4 +1,3 @@
-// .eslintrc.cjs OR .eslintrc.js (recommended for Flat Config)
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -7,7 +6,9 @@ import tsPlugin from "@typescript-eslint/eslint-plugin";
 import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
+  // ignore dist and node_modules globally
   globalIgnores(["dist", "node_modules"]),
+
   {
     files: ["**/*.{ts,tsx}"],
     extends: [
@@ -22,8 +23,15 @@ export default defineConfig([
       globals: globals.browser,
     },
     rules: {
-      "react/react-in-jsx-scope": "off", // THIS REMOVES YOUR YELLOW WARNING
+      "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",
+
+      // Optional stricter rules
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_" },
+      ],
     },
     settings: {
       react: {
