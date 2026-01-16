@@ -1,13 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./app/App"; // Make sure App.tsx exists in src/app
-import { Providers } from "./app/providers"; // Correct path
-import "./styles/global.css";
+﻿import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Providers } from './app/providers.js';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './app/routes.js';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Providers>
-      <App />
+      <RouterProvider router={router} />
     </Providers>
   </React.StrictMode>
 );

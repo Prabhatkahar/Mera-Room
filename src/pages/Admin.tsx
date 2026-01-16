@@ -1,7 +1,2 @@
-import React from "react";
-
-const Admin: React.FC = () => {
-  return <div>Admin Page</div>;
-};
-
+﻿const Admin = () => <h1>Admin Page</h1>;
 export default Admin;

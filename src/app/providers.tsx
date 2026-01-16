@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
-import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "../features/auth/AuthContext.js"; // <--- notice .js
+﻿import type { ReactNode } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from '../features/auth/AuthContext.js';
 
 interface ProvidersProps {
   children: ReactNode;
