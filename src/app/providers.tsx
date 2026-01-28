@@ -1,13 +1,10 @@
-﻿import type { ReactNode } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { AuthProvider } from '../features/auth/AuthContext.js';
+﻿import React from "react";
+import { AuthProvider } from "../features/auth/AuthContext";
 
-interface ProvidersProps {
-  children: ReactNode;
+type Props = {
+  children: React.ReactNode;
+};
+
+export default function Providers({ children }: Props) {
+  return <AuthProvider>{children}</AuthProvider>;
 }
-
-export const Providers = ({ children }: ProvidersProps) => (
-  <BrowserRouter>
-    <AuthProvider>{children}</AuthProvider>
-  </BrowserRouter>
-);

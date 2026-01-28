@@ -1,11 +1,18 @@
-﻿import { createBrowserRouter } from 'react-router-dom';
-import Home from '../pages/Home.js';
-import Login from '../pages/Login.js';
-import Admin from '../pages/Admin.js';
-import ProtectedRoute from '../features/auth/ProtectedRoute.js';
+﻿import { createBrowserRouter } from "react-router-dom";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Admin from "../pages/Admin";
+import ProtectedRoute from "../features/auth/ProtectedRoute";
 
 export const router = createBrowserRouter([
-  { path: '/', element: <Home /> },
-  { path: '/login', element: <Login /> },
-  { path: '/admin', element: <ProtectedRoute><Admin /></ProtectedRoute> }
+  { path: "/", element: <Home /> },
+  { path: "/login", element: <Login /> },
+  {
+    path: "/admin",
+    element: (
+      <ProtectedRoute>
+        <Admin />
+      </ProtectedRoute>
+    ),
+  },
 ]);
